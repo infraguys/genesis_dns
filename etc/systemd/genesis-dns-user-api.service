@@ -1,0 +1,13 @@
+[Unit]
+Description=Genesis DNS User API
+After=network-online.target
+
+[Service]
+TimeoutStopSec=5
+Restart=on-failure
+RestartSec=5s
+KillSignal=SIGINT
+ExecStart=genesis-dns-user-api --config-file /etc/genesis_dns/genesis_dns.conf
+
+[Install]
+WantedBy=multi-user.target
