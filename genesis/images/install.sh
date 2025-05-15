@@ -37,9 +37,7 @@ SYSTEMD_SERVICE_DIR=/etc/systemd/system/
 apt update
 apt install -y \
     postgresql \
-    libev-dev \
-    python3.12-venv \
-    python3-dev
+    libev-dev
 
 # Default creds for genesis notification services
 sudo -u postgres psql -c "CREATE ROLE $GC_PG_USER WITH LOGIN PASSWORD '$GC_PG_PASS';"
